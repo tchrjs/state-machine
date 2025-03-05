@@ -38,13 +38,13 @@ export class StateMachine {
 
         // Exit current state.
         if (this.current_state) {
-            console.log("exiting ", this.current_state.id);
+            console.log("exiting", this.current_state.id);
             this.current_state.onExit();
         }
 
         // Enter new state.
         this.current_state = new_state;
-        console.log("entering ", this.current_state?.id);
+        console.log("entering", this.current_state?.id);
         this.current_state?.onEnter();
     }
 }
