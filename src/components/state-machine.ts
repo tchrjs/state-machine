@@ -46,7 +46,7 @@ const win: State = {
     id: GameStates.WIN,
     async onEnter() {
         await delay(1000);
-        game.transition(win, GameStates.IDLE);
+        game.transition(this, GameStates.IDLE);
     },
     onExit() {},
 };
@@ -55,7 +55,7 @@ const lose: State = {
     id: GameStates.LOSE,
     async onEnter() {
         await delay(1000);
-        game.transition(lose, GameStates.IDLE);
+        game.transition(this, GameStates.IDLE);
     },
     onExit() {},
 };
